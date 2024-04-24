@@ -30,6 +30,12 @@ public class DriverForLinkedListApp {
 	System.out.println("\nAfter adding multiple nodes at the begening of LinkedList : ");
 	System.out.println("******************************************************************");
 	nodeObj.printDataItemsOfLinkedList(nodeObj.getHeadNodeRef());
+	System.out.println(" ");
+	System.out.println("\nAdding nodes at the given index of LinkedList : ");
+	System.out.println("***************************************************");
+	nodeObj.addNodeToLinkListByIndex(555,5);
+	System.out.println(" ");
+	nodeObj.printDataItemsOfLinkedList(nodeObj.getHeadNodeRef());
 	}
 
 }

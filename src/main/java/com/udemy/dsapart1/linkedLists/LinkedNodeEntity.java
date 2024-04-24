@@ -45,11 +45,19 @@ public class LinkedNodeEntity {
 	/**
 	 * @return the currentNodeRef
 	 */
-	public LinkedNodeEntity getCurrentNodeRef() {
+	public LinkedNodeEntity LinkedNodeEntity() {
 		return currentNodeRef;
 	}
 
 	
+	/**
+	 * @return the currentNodeRef
+	 */
+	public LinkedNodeEntity getCurrentNodeRef() {
+		return currentNodeRef;
+	}
+
+
 	@Override
 	public String toString() {
 		return "LinkedNodeEntity [dataValue=" + dataValue + ", nextNodeRef=" + nextNodeRef + "]";
@@ -93,13 +101,27 @@ public class LinkedNodeEntity {
 	public boolean checkIsNodeExistsWithAGivenValue(double targetValue) {
 		boolean blnFlag = false;
 		currentNodeRef = headNodeRef;
-		while (getCurrentNodeRef() != null) {
+		while (currentNodeRef != null) {
 			if (currentNodeRef.dataValue == targetValue) {
 				blnFlag = true;
 			}
 		currentNodeRef = currentNodeRef.nextNodeRef;
 		}
 		return blnFlag;
+	}
+	
+	
+	public void addNodeToLinkListByIndex(double dataValue, int targetIndex) {
+	LinkedNodeEntity newNodeObj = new LinkedNodeEntity(dataValue);
+	int count = 1;
+	LinkedNodeEntity currentNodeRef = headNodeRef;
+	while (currentNodeRef != null && count != targetIndex - 1) {
+	currentNodeRef = currentNodeRef.nextNodeRef;
+	count++;
+	}
+	LinkedNodeEntity tempNode=currentNodeRef.nextNodeRef;
+	currentNodeRef.nextNodeRef=newNodeObj;
+	newNodeObj.nextNodeRef=tempNode;
 	}
 	
 }
