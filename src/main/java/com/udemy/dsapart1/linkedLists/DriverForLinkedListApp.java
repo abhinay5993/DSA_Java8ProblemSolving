@@ -30,12 +30,57 @@ public class DriverForLinkedListApp {
 	System.out.println("\nAfter adding multiple nodes at the begening of LinkedList : ");
 	System.out.println("******************************************************************");
 	nodeObj.printDataItemsOfLinkedList(nodeObj.getHeadNodeRef());
+	
 	System.out.println(" ");
 	System.out.println("\nAdding nodes at the given index of LinkedList : ");
 	System.out.println("***************************************************");
 	nodeObj.addNodeToLinkListByIndex(555,5);
 	System.out.println(" ");
 	nodeObj.printDataItemsOfLinkedList(nodeObj.getHeadNodeRef());
+	System.out.println("\nTotal size of linkList : "+nodeObj.getSizeOfLinkList());
+	
+	System.out.println(" ");
+	System.out.println("\nRemoving node from head/begening of LinkedList : ");
+	System.out.println("*****************************************************");
+	nodeObj.removeNodeFromHead();
+	nodeObj.removeNodeFromHead();
+	System.out.println("\n2 nodes deleted from begening..\n");
+	nodeObj.printDataItemsOfLinkedList(nodeObj.getHeadNodeRef());
+	System.out.println("\nLatest size of linkList : "+nodeObj.getSizeOfLinkList());
+	
+	System.out.println(" ");
+	System.out.println("\nRemoving node from tail of LinkedList : ");
+	System.out.println("*******************************************");
+	nodeObj.removeNodeFromTail();
+	nodeObj.removeNodeFromTail();
+	System.out.println("\n2 nodes deleted from tail.\n");
+	nodeObj.printDataItemsOfLinkedList(nodeObj.getHeadNodeRef());
+	System.out.println("\nLatest size of linkList : "+nodeObj.getSizeOfLinkList());
+	
+	System.out.println(" ");
+	System.out.println("\nRemoving node with even data value from LinkedList : ");
+	System.out.println("********************************************************");
+	nodeObj.deleteAllNodesWithEvenValues();
+	System.out.println("\nnodes deleted from linkList.\n");
+	nodeObj.printDataItemsOfLinkedList(nodeObj.getHeadNodeRef());
+	System.out.println("\nLatest size of linkList : "+nodeObj.getSizeOfLinkList());
+	
+	System.out.println(" ");
+	System.out.println("\nDelete node against a data value from LinkedList : ");
+	System.out.println("*****************************************************");
+	nodeObj.deleteNodeFromLinkListByValue(-34.4);
+	System.out.println("\nnode with value '-34.4' deleted from linkList.\n");
+	nodeObj.printDataItemsOfLinkedList(nodeObj.getHeadNodeRef());
+	System.out.println("\nLatest size of linkList : "+nodeObj.getSizeOfLinkList());
+	
+	System.out.println(" ");
+	System.out.println("\nReverse the LinkedList : ");
+	System.out.println("***************************");
+	nodeObj.reverseTheDirectionOfLinkList();
+	nodeObj.printDataItemsOfLinkedList(nodeObj.getPreviousNodeRef());
+	System.out.println("\nHead Node - "+nodeObj.getPreviousNodeRef().getDataValue());
+	System.out.println("\nTail Node - "+nodeObj.getPreviousNodeRef().getTailNodeRef());
+	
 	}
 
 }

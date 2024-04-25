@@ -14,36 +14,36 @@ public class ArraySumFactorialFobonaciWithRecursion {
     static double inputArr[];
 	
 	public static void main(String[] args) {
-		int sizeOfArr;
-		Scanner scInpObj = new Scanner(System.in);
-		System.out.print("\nEnter the size of Array : ");
-		sizeOfArr = scInpObj.nextInt();
-		inputArr = new double[sizeOfArr];
-		System.out.println("\nEnter the Array elements : ");
-		pushElementsIntoArray(inputArr);
-		System.out.println("\nInput Array : " + Arrays.toString(inputArr));
-		
-		System.out.println("\nSum of Array elements : ");
-		System.out.println("*************************************************");
-		int lastElementPosition=inputArr.length-1;
-		double sumOfItems=findSumOfArrayElements(lastElementPosition);
-		System.out.println(sumOfItems);
-		
-		System.out.print("\nEnter the number to compute factoral : ");
-		double inputNumToFact = scInpObj.nextDouble();
-		System.out.println("*************************************************");
-		System.out.println("\nFactorial of N : ");
-		double factOfNth=calculateFactorialOfN(inputNumToFact);
-		System.out.println(factOfNth);
-		
-		System.out.print("\nN-th number of Fibonacci Series using Recursion : ");
-		long nthNumInput = scInpObj.nextLong();
-		System.out.println("\n*************************************************");
-		System.out.println(""+nthNumInput+"th Fibonacci number : ");
-		long fiboNumVal=getNthFibonaciNumber(nthNumInput);
-		System.out.println(fiboNumVal);
-	}
-
+		   Scanner scInpObj = new Scanner(System.in);
+			int sizeOfArr;
+			System.out.print("\nEnter the size of Array : ");
+			sizeOfArr = scInpObj.nextInt();
+			inputArr = new double[sizeOfArr];
+			System.out.println("\nEnter the Array elements : ");
+			pushElementsIntoArray(inputArr);
+			System.out.println("\nInput Array : " + Arrays.toString(inputArr));
+			
+			System.out.println("\nSum of Array elements : ");
+			System.out.println("*************************************************");
+			int lastElementPosition=inputArr.length-1;
+			double sumOfItems=findSumOfArrayElements(lastElementPosition);
+			System.out.println(sumOfItems);
+			
+			System.out.println("\nEnter the number to compute factoral : ");
+			double inputNumToFact = scInpObj.nextDouble();
+			System.out.println("*************************************************");
+			System.out.println("\nFactorial of N : ");
+			double factOfNth=calculateFactorialOfN(inputNumToFact);
+			System.out.println(factOfNth);
+			
+			System.out.println("\nN-th number of Fibonacci Series using Recursion : ");
+			long nthNumInput = scInpObj.nextLong();
+			System.out.println("\n*************************************************");
+			System.out.println(""+nthNumInput+"th Fibonacci number : ");
+			long fiboNumVal=getNthFibonaciNumber(nthNumInput);
+			System.out.println(fiboNumVal);
+		}
+	
 	
 	/**
 	 * N-th number of Fibonacci Series using Recursion.
@@ -77,18 +77,18 @@ public class ArraySumFactorialFobonaciWithRecursion {
 	 * 
 	 */
 	private static double findSumOfArrayElements(int n) {
-		if (n == 0) {
-		return inputArr[n];
-		}
-	return inputArr[n] + findSumOfArrayElements(n - 1);
+			if (n == 0) {
+				return inputArr[n];
+			}
+		return inputArr[n] + findSumOfArrayElements(n - 1);
 	}
 
 	
-	private static void pushElementsIntoArray(double inputArr[]) {
-		Scanner scInpObj = new Scanner(System.in);
+	public static void pushElementsIntoArray(double inputArr[]) {
+		Scanner scInp1Obj = new Scanner(System.in);
 		for (int i = 0; i < inputArr.length; i++) {
 			System.out.print("\nEnter the element No " + (i + 1) + " : ");
-			inputArr[i] = scInpObj.nextDouble();
+			inputArr[i] = scInp1Obj.nextDouble();
 		}
 	}
 
