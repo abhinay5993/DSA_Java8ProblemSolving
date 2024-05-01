@@ -11,7 +11,7 @@ public class SimpleStackOperations {
 	System.out.print("\nEnter the size of Stack : ");
 	int sizeOfStack = scInpObj.nextInt();
 	firstStack = new Stack<>();
-	//firstStack.setSize(sizeOfStack);
+	firstStack.setSize(sizeOfStack);
 	System.out.println("\nSize of stack has been set.");
 	System.out.println("\nEnter the stack elements : ");
 	pushElementsIntoStack(sizeOfStack);
